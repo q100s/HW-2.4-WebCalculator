@@ -17,19 +17,19 @@ public class CalculatorController {
         return calculatorService.showMainScreen();
     }
     @GetMapping(path = "/calculator/plus")
-    public double summarize (@RequestParam("num1") double number1, @RequestParam("num2") double number2) {
+    public String summarize (@RequestParam("num1") double number1, @RequestParam("num2") double number2) {
         return calculatorService.summarize(number1, number2);
     }
     @GetMapping(path = "/calculator/minus")
-    public double subtract (@RequestParam("num1") double number1, @RequestParam("num2") double number2) {
+    public String subtract (@RequestParam("num1") double number1, @RequestParam("num2") double number2) {
         return calculatorService.subtract(number1, number2);
     }
     @GetMapping(path = "/calculator/multiply")
-    public double multiply (@RequestParam("num1") double number1, @RequestParam("num2") double number2) {
+    public String multiply (@RequestParam("num1") double number1, @RequestParam("num2") double number2) {
         return calculatorService.multiply(number1, number2);
     }
     @GetMapping(path = "/calculator/divide")
-    public double divide (@RequestParam("num1") double number1, @RequestParam("num2") double number2) {
+    public String divide (@RequestParam("num1") double number1, @RequestParam("num2") double number2) {
         return calculatorService.divide(number1, number2);
     }
 }
